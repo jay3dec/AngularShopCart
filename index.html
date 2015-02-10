@@ -1,0 +1,20 @@
+<html ng-app="shopCart">
+	<head>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<div ng-controller="HomeCtrl">
+		<p>{{message}}</p>
+
+		<ul ng-repeat="q in questions">
+			<li>
+				{{q.question}} 
+				<check-list name="q.id" option="q.prices"></check-list>
+			</li>
+		</ul>
+
+		</div>
+		
+	</body>
+</html>
