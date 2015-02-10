@@ -23,12 +23,12 @@ app.directive('checkList',function(){
             option: '='
         },
 		template: function(elem,attrs){
-			console.log({{option}});
 			return '</br> <input type="radio" name="{{name}}" />\
-					Yes </br> <input name="{{name}}" type="radio" /> No'
+					Yes </br> <input name="{{name}}" type="radio" /> No\
+					<div ng-repeat="i in {{option}}"><input type="radio" /></div>'
 		},
 		link:function(scope,elem,attrs){
-			
+			console.log(scope.option);
 		}
 	};
 })
